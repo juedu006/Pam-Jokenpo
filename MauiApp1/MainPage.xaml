@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20,0"
+            Spacing="25">
+            <Image
+                Source="Trio-removebg.png"
+                WidthRequest="400"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Player:"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                FontSize="40"
+                />
+            <Label
+                x:Name="player"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                FontSize="35"
+                />
+
+            <Entry
+                    x:Name="valueEntry"
+                    WidthRequest="400"
+                    Placeholder="Digite aqui o seu nickname"
+                />
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                >
+                <VerticalStackLayout>
+                    <Image
+                        x:Name="ImgPlayer1"
+                        Source="pedra-removebg.png"
+                        WidthRequest="200"
+                        HeightRequest="185"
+                        Aspect="AspectFit"
+                        SemanticProperties.Description="dot net bot in a race car number eight" />
+
+                    <Label
+                        x:Name="pontuacao1"
+                        Text="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        FontSize="40"/>  
+                </VerticalStackLayout>
+                
+                <BoxView
+                    WidthRequest="2"
+                    HeightRequest="270"
+                    />
+
+                <VerticalStackLayout>
+                    <Image
+                        x:Name="ImgPlayer2"
+                        Source="pedra-removebg.png"
+                        WidthRequest="200"
+                        HeightRequest="185"
+                        Aspect="AspectFit"
+                        SemanticProperties.Description="dot net bot in a race car number eight" />
+                    <Label
+                        x:Name="pontuacao2"
+                        Text="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        FontSize="40"/>
+
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            
+            <Label
+                x:Name="visorResult"
+                Text="Resultado da rodada"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                FontSize="40"
+                />
+            
+            <Picker x:Name="picker"
+                    Title="Sua opção:"
+                    WidthRequest="400"
+                    FontSize="15">
+                <Picker.Items>
+                    <x:String>Pedra</x:String>
+                    <x:String>Papel</x:String>
+                    <x:String>Tesoura</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button
+                WidthRequest="200"
+                BackgroundColor="Grey"
+                Text="ROLAR O DADO"
+                Clicked="Start_Clicked" 
+               
+                />
+            <Button
+                WidthRequest="120"
+                BackgroundColor="Black"
+                Text="ZERAR PONTOS"
+                Clicked="Reset_Clicked"
+                FontSize="13"
+                TextColor="White"
+                Padding="0"
+                Margin="0, 0, 0, 20"
+                />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
